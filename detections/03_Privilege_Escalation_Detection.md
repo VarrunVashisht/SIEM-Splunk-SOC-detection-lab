@@ -34,6 +34,8 @@ Detect events where:
 index=practicelog event_type=privilege_escalation
 | stats count by user, src_ip
 ```
+## Snapshot:
+<img width="1907" height="837" alt="image" src="https://github.com/user-attachments/assets/d043196c-ed07-40b5-ad27-1690409f88ba" />
 
 ---
 
@@ -43,6 +45,8 @@ index=practicelog event_type=privilege_escalation
 index=practicelog event_type=privilege_escalation
 | table timestamp user src_ip process command
 ```
+## Snapshot:
+<img width="1887" height="838" alt="image" src="https://github.com/user-attachments/assets/8b669f99-ad9e-463d-8a4e-243b2aa1157d" />
 
 ---
 
@@ -74,6 +78,10 @@ index=practicelog event_type=privilege_escalation
 | sort - count
 ```
 
+## Snapshot:
+<img width="1895" height="704" alt="image" src="https://github.com/user-attachments/assets/4dc107fc-fcd3-4bc5-85c4-454d5b844b2d" />
+
+
 👉 Helps identify:
 
 * Which user is attempting escalation most
@@ -87,6 +95,10 @@ index=practicelog event_type=privilege_escalation
 | where user!="admin"
 | stats count by user, src_ip
 ```
+
+## Snapshot:
+<img width="1911" height="889" alt="image" src="https://github.com/user-attachments/assets/31c07e05-c899-475e-816d-8479108f9b8a" />
+
 
 👉 Focus:
 
@@ -104,6 +116,9 @@ index=practicelog event_type=privilege_escalation
     count
     by user, src_ip
 ```
+## Snapshot:
+<img width="1907" height="877" alt="image" src="https://github.com/user-attachments/assets/019b5f72-593a-457d-9e44-e6c68d05427f" />
+
 
 ---
 
@@ -118,6 +133,9 @@ index=practicelog
     by user, src_ip
 | where escalations > 0
 ```
+## Snapshot:
+<img width="1892" height="889" alt="image" src="https://github.com/user-attachments/assets/91e445ff-4689-474d-8828-6972f1091f9b" />
+
 
 👉 This shows:
 
@@ -174,13 +192,8 @@ When alert triggers:
 
 ---
 
-## 📸 Step 13 — Evidence
 
-(Add Splunk screenshot here)
-
----
-
-## 🧾 Step 14 — Conclusion
+## 🧾 Step 13 — Conclusion
 
 Privilege escalation detection identifies attempts to gain higher-level access, which is a key step in attacker progression.
 
@@ -196,3 +209,5 @@ Early detection helps prevent full system compromise.
 * Built SOC-level detection logic
 
 ---
+
+## Author: Varrun Vashisht
