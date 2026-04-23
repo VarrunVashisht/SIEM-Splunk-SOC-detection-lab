@@ -141,6 +141,11 @@ index=practicelog
 
 * Who logged in and then escalated privileges
 
+👉 What if escalation happens without login?
+
+It could indicate missing logs, exploitation without authentication, or activity outside the time window. 
+
+
 ---
 
 ## 🧠 Why This Is Powerful
